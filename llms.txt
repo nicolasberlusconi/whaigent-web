@@ -37,8 +37,15 @@ WhatsApp comercial: +54 9 341 579-8632 (https://wa.me/5493415798632). Email: wha
 
 Acompañada en cinco pasos: reunión inicial, relevamiento de información, armado de la base de conocimiento, configuración técnica y capacitación del equipo. Demo: https://cal.com/whaigent/reunion
 
+## Clientes
+
+Negocios que ya operan con WhAIgent: Alma Calma, Quo Productos, Insumos Bijou, Mercado de Diseño, Hummus Market, IZ REP, ASM y Focus Desarrollos.
+
 ## Enlaces
 
-- [Sitio principal](https://whaigent.com/): propuesta de valor, funciones, FAQ
+- [Inicio](https://whaigent.com/): el problema, la propuesta de valor y un vistazo a la plataforma
+- [Producto](https://whaigent.com/producto.html): cómo funciona, CRM y pipeline, seguimientos automáticos, campañas masivas, funciones, control humano, casos de uso, integraciones e implementación
+- [Precios](https://whaigent.com/precios.html): plan único de $150.000 ARS/mes y costos de mensajería de Meta
+- [Preguntas frecuentes](https://whaigent.com/preguntas.html): dudas habituales antes de contratar
 - [Acceso a la plataforma](https://admin.whaigent.com/): login para clientes
 - [Agendar una demo](https://cal.com/whaigent/reunion): reunión de 30 minutos sin compromiso
