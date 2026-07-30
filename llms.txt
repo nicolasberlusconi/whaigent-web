@@ -1,0 +1,44 @@
+# WhAIgent
+
+> WhAIgent es una plataforma de operación comercial centrada en WhatsApp para empresas y equipos de venta B2B. Combina atención automática con inteligencia artificial, control humano, CRM con pipeline, asignación de vendedores, campañas segmentadas, seguimientos automáticos, base de conocimiento, catálogo y métricas — todo en un mismo espacio. Es proveedor de soluciones certificado por Meta y opera sobre la API oficial de WhatsApp Business Platform.
+
+Propuesta de valor: WhAIgent conecta WhatsApp, inteligencia artificial y CRM para que cada conversación tenga contexto, responsable y próximo paso.
+
+## Qué hace
+
+- **Asistente IA 24/7**: responde con la información propia del negocio (documentos, catálogo sincronizado por SKU, búsqueda web restringida a dominios autorizados). Configurable en tono, idioma (ES/EN) y prompt. Procesa texto, audios (transcripción) e imágenes. Incluye sandbox de pruebas. No inventa productos ni enlaces.
+- **CRM nativo**: cada conversación puede convertirse en un prospecto con origen, estado, etapa, etiquetas, notas y vendedor responsable. Vistas de tabla y Kanban, filtros, cambios masivos, exportación CSV. Estados y etapas personalizables e independientes.
+- **Control humano**: derivación configurable a personas — alerta al responsable con contexto, pausa persistente de la IA, y retorno al asistente solo cuando el cliente lo pide explícitamente.
+- **Vendedores y permisos**: roles de propietario, manager y vendedor por negocio. Asignación individual, masiva o automática (round-robin). Cada vendedor ve solo sus prospectos.
+- **Campañas masivas**: WhatsApp (con templates aprobados por Meta) y email (SMTP propio). Audiencias segmentadas por etiqueta, estado, origen o vendedor. Confirmación de costo antes de enviar. Historial por destinatario (enviado, entregado, leído, fallido).
+- **Seguimientos automáticos**: reactivación de prospectos por estado comercial y días de demora, por WhatsApp o email, en el idioma del cliente.
+- **Importación CSV**: carga de bases existentes con empresa, contacto, teléfono, email, origen, estado, etapa, notas, vendedor y etiqueta. Validación atómica con reporte de errores por fila.
+- **Métricas**: pipeline, conversión, orígenes, rendimiento por vendedor, conversaciones, y costos de mensajería Meta (reales cuando Meta los informa, estimaciones identificadas como tales cuando no).
+- **Multi-negocio**: varias marcas o unidades con datos, números y equipos aislados bajo una misma cuenta. Ideal para agencias.
+- **Widget web**: botón configurable que convierte visitas del sitio en conversaciones de WhatsApp.
+
+## Para quién es
+
+Empresas y vendedores B2B con volumen de conversaciones, equipo comercial y ventas o soporte recurrentes: mayoristas, distribuidoras, importadores, fábricas, equipos de venta y agencias que administran varias marcas. No está pensado para comercios pequeños con pocas consultas diarias (kioscos, peluquerías, locales de barrio).
+
+## Integraciones
+
+Meta WhatsApp Business Platform (API oficial), modelos de IA de última generación, SMTP, Google Sheets, catálogos CSV, fuentes web autorizadas y webhooks.
+
+## Precios
+
+Precio fijo único: $150.000 ARS por mes con todas las funciones incluidas (IA, CRM, campañas, seguimientos, métricas, equipo, multi-negocio). Implementación sin costo. La mensajería de Meta (conversaciones de WhatsApp) se abona aparte según las tarifas de Meta.
+
+## Contacto
+
+WhatsApp comercial: +54 9 341 579-8632 (https://wa.me/5493415798632). Email: whaigent@gmail.com. Instagram: https://www.instagram.com/whaigent/. Demo: https://cal.com/whaigent/reunion
+
+## Implementación
+
+Acompañada en cinco pasos: reunión inicial, relevamiento de información, armado de la base de conocimiento, configuración técnica y capacitación del equipo. Demo: https://cal.com/whaigent/reunion
+
+## Enlaces
+
+- [Sitio principal](https://whaigent.com/): propuesta de valor, funciones, FAQ
+- [Acceso a la plataforma](https://admin.whaigent.com/): login para clientes
+- [Agendar una demo](https://cal.com/whaigent/reunion): reunión de 30 minutos sin compromiso
