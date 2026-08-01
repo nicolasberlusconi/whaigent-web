@@ -429,6 +429,8 @@ html.js .reveal.in{opacity:1;transform:none}
 .price-zero svg{color:var(--teal-deep);flex:none}
 @media(max-width:920px){.price-grid{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}}
 .price-grid.single{grid-template-columns:minmax(0,520px);justify-content:center}
+.price-grid.two{grid-template-columns:repeat(2,minmax(0,440px));justify-content:center}
+@media(max-width:920px){.price-grid.two{grid-template-columns:1fr}}
 
 /* ============ Floating WhatsApp ============ */
 .wa-float{position:fixed;right:22px;bottom:22px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:transform .15s ease}
@@ -463,6 +465,8 @@ footer{background:var(--bg-dark);color:var(--on-dark-2);border-top:1px solid var
 .foot-col a{display:block;padding:5px 0;color:var(--on-dark-2)}
 .foot-col a:hover{color:#fff}
 .foot-bottom{margin-top:44px;padding-top:24px;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.83rem}
+.foot-bottom a{color:var(--on-dark-2);border-bottom:1px solid var(--line-dark);transition:color .15s,border-color .15s}
+.foot-bottom a:hover{color:#fff;border-color:rgba(255,255,255,.4)}
 
 /* ============ Logos de clientes ============ */
 .proof{margin-top:44px}
@@ -491,3 +495,19 @@ footer{background:var(--bg-dark);color:var(--on-dark-2);border-top:1px solid var
 .endcta{text-align:center;padding:72px 0}
 .endcta h2{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px}
 .endcta p{color:var(--ink-2);max-width:520px;margin:0 auto 26px}
+
+/* ---------- páginas legales ---------- */
+.legal{max-width:760px}
+.legal h2{font-size:1.32rem;margin:44px 0 12px;letter-spacing:-.02em}
+.legal h2:first-of-type{margin-top:0}
+.legal h3{font-size:1.02rem;margin:24px 0 8px}
+.legal p,.legal li{color:var(--ink-2);font-size:1rem}
+.legal p{margin-bottom:14px}
+.legal ul{margin:0 0 14px;display:grid;gap:8px}
+.legal li{position:relative;padding-left:18px}
+.legal li::before{content:"";position:absolute;left:0;top:.68em;width:5px;height:5px;border-radius:50%;background:var(--ink-3)}
+.legal a{border-bottom:1px solid var(--line);font-weight:600;color:var(--ink)}
+.legal a:hover{border-color:var(--ink)}
+.legal .updated{font-size:.88rem;color:var(--ink-3);margin-bottom:36px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.legal .callout{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 22px;margin:20px 0}
+.legal .callout p{margin:0;font-size:.95rem}

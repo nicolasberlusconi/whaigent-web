@@ -54,7 +54,10 @@
       "operatingSystem": "Web",
       "url": "https://whaigent.com/",
       "description": "Plataforma de operación comercial centrada en WhatsApp: atención automática con IA, control humano, CRM con pipeline, asignación de vendedores, campañas segmentadas, seguimientos automáticos, base de conocimiento, catálogo y métricas.",
-      "offers": { "@type": "Offer", "price": "150000", "priceCurrency": "ARS", "url": "https://whaigent.com/precios.html", "description": "Precio fijo único mensual, todas las funciones incluidas; implementación sin costo" },
+      "offers": [
+        { "@type": "Offer", "price": "150000", "priceCurrency": "ARS", "url": "https://whaigent.com/precios.html", "areaServed": "AR", "description": "Mensual en Argentina. Todas las funciones incluidas, 30 días de prueba gratis, sin contrato de permanencia e implementación sin costo." },
+        { "@type": "Offer", "price": "99", "priceCurrency": "USD", "url": "https://whaigent.com/precios.html", "description": "Mensual para el resto de Latinoamérica. Todas las funciones incluidas, 30 días de prueba gratis, sin contrato de permanencia e implementación sin costo." }
+      ],
       "publisher": { "@id": "https://whaigent.com/#org" },
       "featureList": "Asistente IA para WhatsApp, CRM con pipeline Kanban, Control humano y derivación, Campañas masivas WhatsApp y email, Seguimientos automáticos, Base de conocimiento y catálogo, Métricas de conversión y costos, Multi-negocio, Roles y permisos, Importación CSV, Widget web, Soporte ES/EN"
     }
@@ -87,8 +90,8 @@
 <header class="phead">
   <div class="aurora" aria-hidden="true"><i></i><i></i></div>
   <div class="wrap">
-    <h1>Un precio fijo. Todo incluido.</h1>
-    <p>Sin niveles, sin letra chica y sin costo de implementación. Lo mismo para el que arranca que para el que ya factura fuerte.</p>
+    <h1>Probalo 30 días gratis.</h1>
+    <p>Después, un precio fijo con todo incluido. Sin contratos, sin niveles y sin costo de implementación.</p>
   </div>
 </header>
 
@@ -96,9 +99,9 @@
 
 <section class="section" id="plan">
   <div class="wrap">
-    <div class="price-grid single">
+    <div class="price-grid two">
       <div class="price-card featured reveal">
-        <div class="plan">Plan único</div>
+        <div class="plan">Argentina</div>
         <div class="amount">$150.000 <small>ARS / mes</small></div>
         <div class="resp">Todo incluido. Sin niveles, sin sorpresas.</div>
         <ul>
@@ -108,14 +111,27 @@
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Métricas, control humano, multi-negocio y soporte ES/EN</li>
           <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Implementación acompañada sin costo</li>
         </ul>
-        <a class="btn btn-primary" href="https://cal.com/whaigent/reunion" rel="noopener">Empezar ahora</a>
+        <a class="btn btn-primary" href="https://cal.com/whaigent/reunion" rel="noopener">Empezar la prueba gratis</a>
+      </div>
+      <div class="price-card reveal">
+        <div class="plan">Resto de Latinoamérica</div>
+        <div class="amount">USD 99 <small>/ mes</small></div>
+        <div class="resp">Las mismas funciones, facturado en dólares.</div>
+        <ul>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Asistente IA 24/7 con tu base de conocimiento y catálogo</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>CRM completo con pipeline, etiquetas y vendedores</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Campañas masivas y seguimientos automáticos por WhatsApp y email</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Métricas, control humano, multi-negocio y soporte ES/EN</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg>Implementación acompañada sin costo</li>
+        </ul>
+        <a class="btn btn-ghost-light" href="https://cal.com/whaigent/reunion" rel="noopener">Empezar la prueba gratis</a>
       </div>
     </div>
     <div class="price-zero reveal">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 5-5.5"/></svg>
-      Implementación: $0 — te acompañamos de punta a punta sin costo de setup.
+      30 días de prueba gratis · Sin contratos ni permanencia · Implementación sin costo
     </div>
-    <p class="price-note reveal">Precios en pesos argentinos, facturación mensual transparente y sin costos ocultos. La mensajería de Meta (conversaciones de WhatsApp) se abona aparte según las tarifas de Meta — WhAIgent te muestra ese costo con claridad en Métricas.</p>
+    <p class="price-note reveal">Elegís la moneda según dónde facturás: pesos argentinos (ARS) para Argentina, dólares (USD) para el resto de Latinoamérica. Facturación mensual, se cancela cuando quieras. La mensajería de Meta (conversaciones de WhatsApp) se abona aparte según las tarifas de Meta — WhAIgent te muestra ese costo con claridad en Métricas.</p>
   </div>
 </section>
 
@@ -128,7 +144,19 @@
     </div>
     <div class="faq-list reveal">
       <details class="faq-item" open>
-        <summary>¿Qué incluye el plan de $150.000?</summary>
+        <summary>¿Cómo funcionan los 30 días de prueba?</summary>
+        <div class="faq-a">Arrancás con la plataforma completa, sin funciones recortadas y sin tarjeta. Durante esos 30 días hacemos la implementación con vos: conectamos tu número, cargamos tu base de conocimiento y capacitamos al equipo. Si al final decidís no seguir, no pagás nada. La mensajería que Meta cobre durante la prueba corre por tu cuenta de Meta, como siempre.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cuál es mi precio: pesos o dólares?</summary>
+        <div class="faq-a">Si facturás en Argentina, $150.000 ARS por mes. Si estás en cualquier otro país de Latinoamérica, USD 99 por mes. Las funciones son exactamente las mismas en ambos casos — solo cambia la moneda.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hay contrato o permanencia mínima?</summary>
+        <div class="faq-a">No. No firmás contrato de permanencia. La facturación es mensual y podés dar de baja cuando quieras; tus prospectos los exportás a CSV desde el propio CRM y tu número sigue siendo tuyo.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué incluye el plan?</summary>
         <div class="faq-a">Toda la plataforma: asistente IA, CRM completo, campañas, seguimientos, métricas, equipo, multi-negocio, widget y soporte en español e inglés. Más la implementación acompañada de punta a punta, que no tiene costo.</div>
       </details>
       <details class="faq-item">
@@ -138,10 +166,6 @@
       <details class="faq-item">
         <summary>¿Hay costo de implementación o setup?</summary>
         <div class="faq-a">No. La implementación es acompañada y sin costo: reunión inicial, relevamiento, armado de la base de conocimiento, configuración técnica y capacitación del equipo.</div>
-      </details>
-      <details class="faq-item">
-        <summary>¿Hay permanencia mínima?</summary>
-        <div class="faq-a">La facturación es mensual y transparente. Lo conversamos en la reunión inicial según tu caso.</div>
       </details>
     </div>
   </div>
@@ -211,7 +235,7 @@
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 WhAIgent. Todos los derechos reservados.</span>
+      <span>© 2026 WhAIgent · <a href="terminos.html">Términos y condiciones</a> · <a href="privacidad.html">Privacidad</a></span>
       <span style="display:inline-flex;align-items:center;gap:12px">Proveedor de soluciones certificado por Meta <img src="brand-meta-partner-sm.webp" alt="Meta Business Partner" width="69" height="28" loading="lazy" style="height:28px;width:auto"></span>
     </div>
   </div>

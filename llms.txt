@@ -27,7 +27,7 @@ Meta WhatsApp Business Platform (API oficial), modelos de IA de última generaci
 
 ## Precios
 
-Precio fijo único: $150.000 ARS por mes con todas las funciones incluidas (IA, CRM, campañas, seguimientos, métricas, equipo, multi-negocio). Implementación sin costo. La mensajería de Meta (conversaciones de WhatsApp) se abona aparte según las tarifas de Meta.
+30 días de prueba gratis, sin tarjeta. Después: $150.000 ARS por mes si se factura en Argentina, o USD 99 por mes en el resto de Latinoamérica. Las funciones son las mismas en ambos casos. Sin contrato de permanencia: la facturación es mensual y se puede cancelar cuando se quiera. Implementación acompañada sin costo. La mensajería de Meta (conversaciones de WhatsApp) se abona aparte, directamente a Meta y según sus tarifas.
 
 ## Contacto
 
@@ -47,5 +47,7 @@ Negocios que ya operan con WhAIgent: Alma Calma, Quo Productos, Insumos Bijou, M
 - [Producto](https://whaigent.com/producto.html): cómo funciona, CRM y pipeline, seguimientos automáticos, campañas masivas, funciones, control humano, casos de uso, integraciones e implementación
 - [Precios](https://whaigent.com/precios.html): plan único de $150.000 ARS/mes y costos de mensajería de Meta
 - [Preguntas frecuentes](https://whaigent.com/preguntas.html): dudas habituales antes de contratar
+- [Términos y condiciones](https://whaigent.com/terminos.html)
+- [Política de privacidad](https://whaigent.com/privacidad.html)
 - [Acceso a la plataforma](https://admin.whaigent.com/): login para clientes
 - [Agendar una demo](https://cal.com/whaigent/reunion): reunión de 30 minutos sin compromiso
