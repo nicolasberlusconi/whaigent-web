@@ -511,3 +511,106 @@ footer{background:var(--bg-dark);color:var(--on-dark-2);border-top:1px solid var
 .legal .updated{font-size:.88rem;color:var(--ink-3);margin-bottom:36px;padding-bottom:22px;border-bottom:1px solid var(--line)}
 .legal .callout{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px 22px;margin:20px 0}
 .legal .callout p{margin:0;font-size:.95rem}
+
+/* ==========================================================================
+   Pase estético — hero a una columna, captura anotada, píldoras,
+   tarjetas de rol y quiebre de alto contraste.
+   ========================================================================== */
+
+/* ---------- neutro tintado: conversa con el teal de marca ---------- */
+:root{
+  --bg-soft:#f4f8f7;
+  --line:#e2e9e7;
+}
+
+/* ---------- hero en una sola columna ---------- */
+.hero-solo{text-align:center;position:relative;z-index:1}
+.hero-solo .badge{margin-left:auto;margin-right:auto}
+.hero-solo h1{max-width:15ch;margin-left:auto;margin-right:auto}
+.hero-solo .sub{margin-left:auto;margin-right:auto;max-width:640px}
+.hero-solo .hero-ctas{justify-content:center}
+.hero-solo .hero-proof{justify-content:center}
+.hero-cta-note{font-size:.86rem;color:var(--on-dark-2);margin-top:14px}
+
+/* ---------- captura anotada ---------- */
+.shotly{position:relative;margin:56px auto 0;max-width:1000px}
+.shotly .frame{border:1px solid rgba(255,255,255,.14);border-radius:16px;overflow:hidden;background:#0d1b26;box-shadow:0 30px 70px rgba(0,0,0,.45)}
+.shotly .frame-top{display:flex;align-items:center;gap:8px;padding:11px 15px;background:rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.09)}
+.shotly .frame-top i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.22);display:block}
+.shotly .frame-top span{margin-left:6px;font-size:.74rem;color:var(--on-dark-2);letter-spacing:.02em}
+.shotly img{display:block;width:100%;height:auto}
+
+/* tarjetas que explican la captura */
+.pin{position:absolute;background:#fff;border-radius:14px;box-shadow:0 18px 40px rgba(6,12,18,.28);padding:15px 17px;width:236px;text-align:left;z-index:3}
+.pin .pin-h{display:flex;align-items:center;gap:9px;margin-bottom:9px}
+.pin .pin-ico{width:30px;height:30px;border-radius:9px;background:var(--teal-soft);color:var(--teal-deep);display:flex;align-items:center;justify-content:center;flex:none}
+.pin .pin-h b{font-size:.68rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3)}
+.pin strong{display:block;font-size:1.02rem;letter-spacing:-.02em;color:var(--ink);margin-bottom:5px}
+.pin p{font-size:.83rem;color:var(--ink-2);line-height:1.45;margin:0}
+.pin-1{top:11%;left:-46px}
+.pin-2{top:53%;left:-70px}
+.pin-3{top:26%;right:-58px}
+@media(max-width:1180px){.pin-1{left:-14px}.pin-2{left:-24px}.pin-3{right:-16px}}
+@media(max-width:980px){
+  .shotly{margin-top:40px}
+  .pin{position:static;width:auto;box-shadow:none;border:1px solid var(--line);margin-top:12px}
+  .pins-mobile{display:grid;gap:12px;margin-top:16px}
+}
+@media(prefers-reduced-motion:no-preference){
+  html.js .pin{opacity:0;transform:translateY(12px);animation:pinIn .55s cubic-bezier(.2,.8,.3,1.05) forwards}
+  html.js .pin-1{animation-delay:.7s}
+  html.js .pin-2{animation-delay:1s}
+  html.js .pin-3{animation-delay:1.3s}
+  @keyframes pinIn{to{opacity:1;transform:none}}
+}
+
+/* ---------- etiquetas de sección centradas ---------- */
+.center .kicker,.kicker.mid{justify-content:center;color:var(--teal-deep);letter-spacing:.14em}
+.kicker.mid{display:flex}
+
+/* ---------- píldoras ---------- */
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.pill{font-size:.74rem;font-weight:650;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:4px 11px;background:#fff}
+.on-dark .pill,.features .pill{color:var(--on-dark-2);border-color:var(--line-dark);background:transparent}
+
+/* ---------- tarjetas de rol ---------- */
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.role{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+.role-top{background:var(--bg-dark);padding:22px 24px;display:flex;align-items:center;gap:14px}
+.role-mark{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#4d8af0,#00bfa6);display:flex;align-items:center;justify-content:center;flex:none;color:#fff}
+.role-top b{display:block;color:#fff;font-size:1.06rem;letter-spacing:-.02em}
+.role-top span{display:block;color:var(--teal-bright);font-size:.79rem;font-weight:600;margin-top:2px}
+.role-body{padding:22px 24px}
+.role-quote{font-style:italic;color:var(--ink-2);font-size:.93rem;border-left:2px solid var(--teal);padding-left:13px;margin-bottom:14px}
+.role-body p{color:var(--ink-2);font-size:.94rem}
+.role-list{margin-top:14px;display:grid;gap:8px}
+.role-list li{display:flex;gap:9px;align-items:flex-start;font-size:.88rem;color:var(--ink-2)}
+.role-list svg{color:var(--teal);flex:none;margin-top:3px}
+@media(max-width:920px){.roles{grid-template-columns:1fr}}
+
+/* ---------- quiebre de alto contraste ---------- */
+.manifesto{background:linear-gradient(135deg,#0a1a2e 0%,#0d2b3f 45%,#07231f 100%);color:var(--on-dark);position:relative;overflow:hidden;text-align:center}
+.manifesto::after{content:"";position:absolute;inset:-30% -20% auto;height:70%;background:radial-gradient(ellipse at 50% 0%,rgba(0,191,166,.20),transparent 65%);pointer-events:none}
+.manifesto .wrap{position:relative;z-index:1}
+.manifesto h2{color:#fff;max-width:18ch;margin:0 auto 12px}
+.manifesto .lead{color:var(--on-dark-2);margin:0 auto 44px}
+.mani-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;text-align:left}
+.mani{border:1px solid var(--line-dark);border-radius:var(--radius);padding:26px 24px;background:rgba(255,255,255,.03)}
+.mani.win{border-color:rgba(0,191,166,.45);background:rgba(0,191,166,.08)}
+.mani b{display:block;font-size:1.1rem;color:#fff;letter-spacing:-.02em;margin-bottom:7px}
+.mani p{color:var(--on-dark-2);font-size:.95rem}
+.mani.win p{color:var(--on-dark)}
+.mani-foot{margin-top:34px;color:var(--on-dark-2);font-size:.97rem;max-width:60ch;margin-left:auto;margin-right:auto}
+.mani-foot em{font-style:normal;color:var(--teal-bright);font-weight:650}
+@media(max-width:860px){.mani-grid{grid-template-columns:1fr}}
+
+/* ---------- flujo horizontal numerado ---------- */
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:52px;position:relative}
+.flow::before{content:"";position:absolute;top:26px;left:8%;right:8%;height:1px;background:linear-gradient(90deg,transparent,var(--line) 12%,var(--line) 88%,transparent)}
+.step{position:relative;text-align:left}
+.step-badge{width:52px;height:52px;border-radius:14px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;color:var(--teal-deep);position:relative;z-index:1;margin-bottom:16px}
+.step-n{position:absolute;top:-7px;right:-7px;width:21px;height:21px;border-radius:50%;background:var(--bg-dark);color:#fff;font-size:.68rem;font-weight:800;display:flex;align-items:center;justify-content:center}
+.step b{display:block;font-size:.99rem;letter-spacing:-.015em;margin-bottom:6px}
+.step p{color:var(--ink-2);font-size:.89rem;line-height:1.5}
+@media(max-width:1000px){.flow{grid-template-columns:repeat(2,1fr);gap:30px 20px}.flow::before{display:none}}
+@media(max-width:600px){.flow{grid-template-columns:1fr}}
