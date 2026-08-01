@@ -614,3 +614,10 @@ footer{background:var(--bg-dark);color:var(--on-dark-2);border-top:1px solid var
 .step p{color:var(--ink-2);font-size:.89rem;line-height:1.5}
 @media(max-width:1000px){.flow{grid-template-columns:repeat(2,1fr);gap:30px 20px}.flow::before{display:none}}
 @media(max-width:600px){.flow{grid-template-columns:1fr}}
+
+/* ---------- resultados en dos columnas (páginas de industria) ---------- */
+.outcomes{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 44px}
+.outcome{padding-top:20px;border-top:1px solid var(--line)}
+.outcome b{display:block;font-size:1.05rem;letter-spacing:-.015em;margin-bottom:6px}
+.outcome p{color:var(--ink-2);font-size:.95rem}
+@media(max-width:760px){.outcomes{grid-template-columns:1fr;gap:20px}}
