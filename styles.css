@@ -717,3 +717,13 @@ footer{background:var(--bg-dark);color:var(--on-dark-2);border-top:1px solid var
     background:linear-gradient(180deg, rgba(8,16,25,.55) 0%, transparent 40%, rgba(8,16,25,.35) 72%, var(--bg-dark) 100%)}
   .phead-tint{display:none}
 }
+
+/* ---------- sección activa en el menú ---------- */
+.nav-links a[aria-current="page"]{color:#fff;position:relative}
+.nav-links a[aria-current="page"]::after{
+  content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,#4d8af0,#00bfa6)}
+@media(max-width:920px){
+  .nav.open .nav-links a[aria-current="page"]::after{display:none}
+  .nav.open .nav-links a[aria-current="page"]{color:var(--teal-bright)}
+}
