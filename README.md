@@ -42,7 +42,7 @@ Pendiente opcional: una captura de **Conversaciones** con datos demo (la actual 
 
 ## Datos integrados de la web anterior
 
-- WhatsApp de contacto: **+54 9 341 579-8632** (wa.me/5493415798632) — botón flotante, CTA final y footer.
+- WhatsApp de contacto: **+54 9 353 427-6199** (wa.me/5493534276199) — botón flotante, CTA final y footer.
 - Precios: Starting $100.000 / Growing $150.000 / Enterprise $250.000 ARS/mes (1.000/5.000/10.000 respuestas), implementación $0 — sección #precios + FAQ + JSON-LD.
 - Identidad: logo oficial (estrella + wordmark azul/teal), paleta #4d8af0 + #00bfa6, badge Meta Business Partner.
 
