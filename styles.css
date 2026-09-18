@@ -432,12 +432,6 @@ html.js .reveal.in{opacity:1;transform:none}
 .price-grid.two{grid-template-columns:repeat(2,minmax(0,440px));justify-content:center}
 @media(max-width:920px){.price-grid.two{grid-template-columns:1fr}}
 
-/* ============ Floating WhatsApp ============ */
-.wa-float{position:fixed;right:22px;bottom:22px;z-index:40;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.28);transition:transform .15s ease}
-.wa-float:hover{transform:scale(1.07)}
-.wa-float svg{width:30px;height:30px}
-@media print{.wa-float{display:none}}
-
 /* ============ FAQ ============ */
 .faq-list{max-width:780px;margin:52px auto 0}
 .faq-item{border:1px solid var(--line);border-radius:var(--radius-sm);background:#fff;margin-bottom:12px;overflow:hidden}
