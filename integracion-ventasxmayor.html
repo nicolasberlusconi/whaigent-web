@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integración con VentasxMayor: tu tienda mayorista en WhatsApp — WhAIgent</title>
+<meta name="description" content="WhAIgent se conecta a tu tienda B2B de VentasxMayor: lee el catálogo y los clientes, y responde precio de lista y stock por WhatsApp con el dato en vivo de la tienda. Integración de solo lectura.">
+<link rel="canonical" href="https://whaigent.com/integracion-ventasxmayor.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#081019">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WhAIgent">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://whaigent.com/integracion-ventasxmayor.html">
+<meta property="og:title" content="Integración con VentasxMayor: tu tienda mayorista en WhatsApp — WhAIgent">
+<meta property="og:description" content="WhAIgent se conecta a tu tienda B2B de VentasxMayor: lee el catálogo y los clientes, y responde precio de lista y stock por WhatsApp con el dato en vivo de la tienda. Integración de solo lectura.">
+<meta property="og:image" content="https://whaigent.com/og-integracion-ventasxmayor.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="brand-favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="brand-favicon.png">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://whaigent.com/#org",
+      "name": "WhAIgent",
+      "url": "https://whaigent.com/",
+      "logo": "https://whaigent.com/brand-logo-color.png",
+      "description": "Plataforma de operación comercial para WhatsApp: IA, CRM, control humano, campañas, seguimientos y métricas. Proveedor de soluciones certificado por Meta.",
+      "sameAs": [
+        "https://www.instagram.com/whaigent/"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://whaigent.com/integracion-ventasxmayor.html#page",
+      "url": "https://whaigent.com/integracion-ventasxmayor.html",
+      "name": "Integración con VentasxMayor: tu tienda mayorista en WhatsApp — WhAIgent",
+      "description": "WhAIgent se conecta a tu tienda B2B de VentasxMayor: lee el catálogo y los clientes, y responde precio de lista y stock por WhatsApp con el dato en vivo de la tienda. Integración de solo lectura.",
+      "inLanguage": "es-AR",
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": "https://whaigent.com/#site",
+        "url": "https://whaigent.com/",
+        "name": "WhAIgent"
+      },
+      "about": [
+        {
+          "@id": "https://whaigent.com/#org"
+        },
+        {
+          "@type": "Organization",
+          "name": "VentasxMayor",
+          "url": "https://ventasxmayor.com.ar/",
+          "description": "Plataforma de tienda B2B para mayoristas, fabricantes, importadores y distribuidores."
+        }
+      ],
+      "significantLink": [
+        "https://ventasxmayor.com.ar/integracion-whaigent",
+        "https://ventasxmayor.com.ar/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://whaigent.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Integraciones",
+          "item": "https://whaigent.com/producto.html#integraciones"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "VentasxMayor",
+          "item": "https://whaigent.com/integracion-ventasxmayor.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué necesito para conectar mi tienda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un negocio activo en WhAIgent con acceso de propietario o manager, una tienda activa en VentasxMayor con usuario administrador y el token propio de esa tienda, que se genera en el panel desde Configuración → ERP. También hay que confirmar la moneda real de los precios."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿WhAIgent puede responder precio y stock?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Cuando el cliente envía el código o SKU exacto, WhAIgent consulta la tienda en ese momento e informa el precio de lista general y el stock que la tienda devuelve. Si el cliente pregunta por nombre, primero sugiere productos y códigos, sin confirmar valores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puede mostrar el precio especial de un cliente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Las listas privadas, los descuentos personalizados y las condiciones finales se confirman con un vendedor. El asistente deriva la conversación cuando el caso lo pide."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puede crear un pedido o reservar stock?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. La integración es de lectura: no crea pedidos, no modifica stock y no escribe información comercial en la tienda. Informar stock no implica reservarlo. El pedido se cierra por el proceso de compra de tu tienda."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si la tienda no responde o el código no existe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WhAIgent no inventa el dato ni lo reemplaza con información de otra fuente. Avisa que no pudo confirmarlo y orienta al cliente hacia un vendedor."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El catálogo se actualiza solo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La sincronización del catálogo es manual y se hace por lotes: conviene correrla cuando el catálogo está estable. El precio y el stock, en cambio, se consultan en vivo cada vez que el cliente manda un código exacto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa con mis prospectos si desconecto la tienda?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se elimina la credencial guardada y el catálogo de la integración. Los prospectos, notas, estados, etapas y responsables que ya están en WhAIgent se conservan."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Principal">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="logo" aria-label="WhAIgent — inicio">
+      <img src="brand-logo-white-sm.png" alt="WhAIgent" width="133" height="34">
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="producto.html" aria-current="page">Producto</a>
+      <a href="industrias.html">Industrias</a>
+      <a href="precios.html">Precios</a>
+      <a href="preguntas.html">Preguntas</a>
+    </div>
+    <div class="nav-cta">
+      <a class="nav-login" href="https://admin.whaigent.com/" rel="noopener">Ingresar</a>
+      <a class="btn btn-primary" href="https://cal.com/whaigent/reunion" rel="noopener">Diagnóstico gratis</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="phead vx-hero">
+  <div class="wrap">
+    <div class="vx-lockup" role="img" aria-label="WhAIgent integrado con VentasxMayor">
+      <img class="vx-l-wh" src="brand-logo-white-sm.png" alt="" width="125" height="32">
+      <span class="vx-x"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg></span>
+      <img class="vx-l-vx" src="logos/ventasxmayor-white-sm.webp" srcset="logos/ventasxmayor-white-sm.webp 1x, logos/ventasxmayor-white.webp 2x" alt="" width="120" height="46">
+    </div>
+    <div class="kicker mid" style="color:var(--teal-bright)">Integración · Tiendas B2B</div>
+    <h1>Tu tienda de VentasxMayor, respondiendo por WhatsApp</h1>
+    <p>WhAIgent se conecta a tu tienda B2B de <a class="vx-inline" style="color:#fff;border-color:rgba(255,255,255,.35)" href="https://ventasxmayor.com.ar/" rel="noopener">VentasxMayor</a>, lee el catálogo y los clientes, y contesta precio de lista y stock con el dato que la tienda devuelve en ese momento.</p>
+    <div class="vx-hero-cta">
+      <a class="btn btn-primary btn-lg" href="https://cal.com/whaigent/reunion" rel="noopener">Conectar mi tienda</a>
+      <a class="btn btn-ghost btn-lg" href="https://ventasxmayor.com.ar/integracion-whaigent" rel="noopener">Verla en VentasxMayor <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+    </div>
+    <div class="vx-facts">
+      <div class="vx-fact"><small>Tipo</small><b>Agente de IA + CRM para WhatsApp</b></div>
+      <div class="vx-fact"><small>Sincroniza</small><b>Catálogo · Clientes</b></div>
+      <div class="vx-fact"><small>Conexión</small><b>Token propio de cada tienda</b></div>
+      <div class="vx-fact"><small>Modo</small><b>Solo lectura: no toca pedidos ni stock</b></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="section" id="beneficios">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="kicker">Qué cambia</div>
+      <h2 class="h2">El catálogo de tu tienda,<br>disponible en cada chat</h2>
+      <p class="lead">Tus clientes ya preguntan por WhatsApp lo que está publicado en la tienda. Con la integración, la respuesta sale de la misma fuente.</p>
+    </div>
+    <div class="outcomes" style="margin-top:52px">
+      <div class="outcome reveal"><b>Precio y stock consultados en vivo</b><p>Cuando el cliente manda el código exacto, WhAIgent consulta la tienda en ese momento. Informa el precio de lista general y el stock que la tienda devuelve, por producto o por variante.</p></div>
+      <div class="outcome reveal"><b>Búsqueda por nombre sin confusiones</b><p>Si preguntan por “remera negra”, el asistente propone productos y códigos del catálogo sincronizado. No confirma valores hasta tener el código correcto.</p></div>
+      <div class="outcome reveal"><b>Los clientes de la tienda, en tu CRM</b><p>Importás los clientes al pipeline y ves cuántos se crearon, actualizaron, omitieron o quedaron en conflicto. Las notas, etapas y vendedores que cargaste en WhAIgent se conservan.</p></div>
+      <div class="outcome reveal"><b>Un vendedor toma el chat cuando hace falta</b><p>Precios especiales, condiciones y cierre quedan en manos de tu equipo. El vendedor pausa la IA, responde a mano y sigue la oportunidad desde el mismo lugar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="como-responde" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="kicker">Cómo responde</div>
+      <h2 class="h2">Primero el código, después el precio</h2>
+      <p class="lead">El flujo está pensado para que un nombre parecido nunca termine mostrando el precio del producto equivocado.</p>
+    </div>
+    <div class="vx-flow">
+      <div class="reveal">
+        <div class="vx-vstep"><div class="vx-vstep-n">1</div><div><b>Consulta por nombre</b><p>El asistente busca coincidencias en el catálogo sincronizado y propone nombres y códigos. En esta etapa no confirma precio ni disponibilidad.</p></div></div>
+        <div class="vx-vstep"><div class="vx-vstep-n">2</div><div><b>Confirmación por código</b><p>El cliente escribe el código o SKU completo. Recién ahí WhAIgent consulta la tienda y responde con la moneda confirmada, el precio de lista y el stock del momento.</p></div></div>
+        <div class="vx-vstep"><div class="vx-vstep-n">3</div><div><b>Si no se puede confirmar, no se inventa</b><p>Si la tienda no responde o el código no coincide, el asistente lo dice y deriva al cliente con un vendedor.</p></div></div>
+      </div>
+      <div class="reveal">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="chat-head">
+              <div class="chat-avatar">T</div>
+              <div class="chat-head-info"><b>Textil Andina Mayorista</b><small>● Asistente activo</small></div>
+            </div>
+            <div class="chat-body">
+              <div class="msg in">Hola! ¿Tienen remera negra lisa?<small>21:40</small></div>
+              <div class="msg out">¡Hola! Encontré estas opciones:<br><b>RM-210</b> · Remera lisa negra<br><b>RM-214</b> · Remera oversize negra<br>Pasame el código y te confirmo precio y stock.<small>21:40 <span class="tick">✓✓</span></small></div>
+              <div class="msg in">RM-210<small>21:41</small></div>
+              <div class="msg out"><b>RM-210 · Remera lisa negra</b><br>Precio de lista: <b>$8.900</b><br>Stock: 320 u. (talles S a XL)<br>Para precio por volumen te paso con un vendedor.<small>21:41 <span class="tick">✓✓</span></small></div>
+              <div class="chat-chip"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Consultado en vivo en la tienda</div>
+            </div>
+          </div>
+        </div>
+        <p class="vx-caption">Ejemplo ilustrativo con datos ficticios.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="alcance">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="kicker">Alcance</div>
+      <h2 class="h2">Qué hace hoy y qué no</h2>
+      <p class="lead">Preferimos decirlo antes de la demo. La integración lee tu tienda. No escribe en ella.</p>
+    </div>
+    <div class="vx-scope">
+      <div class="vx-scope-card vx-yes reveal">
+        <h3>Incluido</h3>
+        <ul>
+          <li>Conexión individual por tienda, con el token cifrado.</li>
+          <li>Validación de la conexión antes de guardarla.</li>
+          <li>Sincronización manual del catálogo, por lotes.</li>
+          <li>Búsqueda de productos por nombre.</li>
+          <li>Consulta en vivo de precio de lista y stock por código exacto.</li>
+          <li>Importación de clientes con revisión de conflictos.</li>
+          <li>Desconexión sin perder los prospectos de WhAIgent.</li>
+        </ul>
+      </div>
+      <div class="vx-scope-card vx-no reveal">
+        <h3>No incluido</h3>
+        <ul>
+          <li>Crear, editar o cancelar pedidos.</li>
+          <li>Cargar el carrito, completar el checkout o cobrar.</li>
+          <li>Reservar o modificar stock.</li>
+          <li>Aplicar precios especiales o listas privadas por cliente.</li>
+          <li>Sincronizar el catálogo en tiempo real.</li>
+          <li>Interpretar fotos de productos: el cliente describe por texto.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="vx-scope-note">Importar un cliente al CRM no equivale a tener su consentimiento para campañas. Eso se administra por separado.</p>
+  </div>
+</section>
+
+<section class="section onb" id="conexion">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="kicker">Conexión</div>
+      <h2 class="h2">Se conecta en cuatro pasos</h2>
+      <p class="lead">La activación se hace junto al equipo de WhAIgent. Vos traés el token de tu tienda.</p>
+    </div>
+    <div class="vx-steps">
+      <div class="onb-step reveal"><b>Generás el token</b><p>En el panel de tu tienda, desde Configuración → ERP. Es un token por negocio.</p></div>
+      <div class="onb-step reveal"><b>Lo cargás en WhAIgent</b><p>En Funciones → Integraciones → Ventas x Mayor. Confirmás la moneda y validás la conexión.</p></div>
+      <div class="onb-step reveal"><b>Sincronizás</b><p>Traés el catálogo e importás los clientes. Revisás los conflictos antes de seguir.</p></div>
+      <div class="onb-step reveal"><b>Probás por WhatsApp</b><p>Una búsqueda por nombre, un código real, uno inexistente y la derivación a un vendedor.</p></div>
+    </div>
+    <div class="vx-manual reveal">
+      <div>
+        <b>El manual completo está en VentasxMayor</b>
+        <p>Paso a paso, errores frecuentes y lista de verificación para activar.</p>
+      </div>
+      <a class="vx-link" href="https://ventasxmayor.com.ar/integracion-whaigent" rel="noopener">Manual de la integración con WhAIgent <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section features" id="seguridad">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="kicker">Seguridad</div>
+      <h2 class="h2">Una conexión por tienda, sin credenciales compartidas</h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal"><div class="f-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><h3>Token cifrado</h3><p>Cada tienda usa su propio token. Queda cifrado en WhAIgent y no se vuelve a mostrar después de guardarlo.</p></div>
+      <div class="feat reveal"><div class="f-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div><h3>WhAIgent solo lee</h3><p>El conector se limita a consultar catálogo y clientes. El token es una llave del negocio: si se filtra, se rota desde la tienda.</p></div>
+      <div class="feat reveal"><div class="f-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Separado por negocio</h3><p>Solo un propietario o manager configura la conexión. Los datos del catálogo se tratan como información, nunca como instrucciones para la IA.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ventasxmayor">
+  <div class="wrap">
+    <div class="vx-partner reveal">
+      <div class="vx-partner-logo">
+        <a href="https://ventasxmayor.com.ar/" rel="noopener" aria-label="VentasxMayor, plataforma de tienda B2B para mayoristas"><img src="logos/ventasxmayor-dark.webp" alt="VentasxMayor, plataforma de tienda B2B para mayoristas" width="219" height="84" loading="lazy"></a>
+        <small>Plataforma integrada</small>
+      </div>
+      <div class="vx-partner-body">
+        <div class="kicker">Sobre VentasxMayor</div>
+        <h2>La tienda B2B donde tus clientes mayoristas compran solos</h2>
+        <p><a class="vx-inline" href="https://ventasxmayor.com.ar/" rel="noopener">VentasxMayor</a> es una plataforma de tienda online B2B para mayoristas, fabricantes, importadores y distribuidores. Cada cliente entra a su propia lista de precios, compra por variante, bulto o curva, y el pedido llega ordenado al depósito.</p>
+        <p>La tienda resuelve la compra. WhAIgent resuelve la conversación que pasa antes, por WhatsApp. Conectadas, las dos trabajan con el mismo catálogo.</p>
+        <div class="vx-partner-cta">
+          <a class="btn btn-ghost-light" href="https://ventasxmayor.com.ar/" rel="noopener">Conocer VentasxMayor <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+          <a class="vx-link" href="https://ventasxmayor.com.ar/integraciones" rel="noopener">Directorio de integraciones de VentasxMayor</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq" style="background:var(--bg-soft)">
+  <div class="wrap">
+    <div class="center reveal">
+      <div class="kicker">Preguntas frecuentes</div>
+      <h2 class="h2">Lo que conviene saber antes de conectar</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>¿Qué necesito para conectar mi tienda?</summary>
+        <div class="faq-a">Un negocio activo en WhAIgent con acceso de propietario o manager, una tienda activa en VentasxMayor con usuario administrador y el token propio de esa tienda, que se genera en el panel desde Configuración → ERP. También hay que confirmar la moneda real de los precios.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿WhAIgent puede responder precio y stock?</summary>
+        <div class="faq-a">Sí. Cuando el cliente envía el código o SKU exacto, WhAIgent consulta la tienda en ese momento e informa el precio de lista general y el stock que la tienda devuelve. Si el cliente pregunta por nombre, primero sugiere productos y códigos, sin confirmar valores.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puede mostrar el precio especial de un cliente?</summary>
+        <div class="faq-a">No. Las listas privadas, los descuentos personalizados y las condiciones finales se confirman con un vendedor. El asistente deriva la conversación cuando el caso lo pide.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Puede crear un pedido o reservar stock?</summary>
+        <div class="faq-a">No. La integración es de lectura: no crea pedidos, no modifica stock y no escribe información comercial en la tienda. Informar stock no implica reservarlo. El pedido se cierra por el proceso de compra de tu tienda.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa si la tienda no responde o el código no existe?</summary>
+        <div class="faq-a">WhAIgent no inventa el dato ni lo reemplaza con información de otra fuente. Avisa que no pudo confirmarlo y orienta al cliente hacia un vendedor.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿El catálogo se actualiza solo?</summary>
+        <div class="faq-a">La sincronización del catálogo es manual y se hace por lotes: conviene correrla cuando el catálogo está estable. El precio y el stock, en cambio, se consultan en vivo cada vez que el cliente manda un código exacto.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa con mis prospectos si desconecto la tienda?</summary>
+        <div class="faq-a">Se elimina la credencial guardada y el catálogo de la integración. Los prospectos, notas, estados, etapas y responsables que ya están en WhAIgent se conservan.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section cta" id="demo">
+  <div class="wrap">
+    <h2 class="reveal">¿Ya vendés con VentasxMayor?<br>Conectemos tu WhatsApp.</h2>
+    <p class="reveal">En 30 minutos vemos tu tienda y tu operación de WhatsApp, y dejamos definido qué va a responder el asistente y qué queda para tu equipo.</p>
+    <div class="reveal" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn-primary btn-lg" href="https://cal.com/whaigent/reunion" rel="noopener">Conectar mi tienda</a>
+      <a class="btn btn-ghost btn-lg" href="https://ventasxmayor.com.ar/" rel="noopener">Conocer VentasxMayor <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
+    </div>
+    <div class="cta-note reveal">30 días de prueba gratis · Implementación acompañada · API oficial de Meta</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo">
+          <img src="brand-logo-white-sm.png" alt="WhAIgent" width="109" height="28" style="height:28px;width:auto">
+        </a>
+        <p>Plataforma de operación comercial para WhatsApp. IA, CRM y control humano para equipos de venta B2B.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <b>Producto</b>
+          <a href="producto.html">La plataforma</a>
+          <a href="producto.html#crm">CRM y pipeline</a>
+          <a href="producto.html#seguimientos">Seguimientos</a>
+          <a href="producto.html#campanas">Campañas</a>
+          <a href="producto.html#integraciones">Integraciones</a>
+          <a href="integracion-ventasxmayor.html">Integración VentasxMayor</a>
+        </div>
+        <div class="foot-col">
+          <b>Empresa</b>
+          <a href="precios.html">Precios</a>
+          <a href="industrias.html">Industrias</a>
+          <a href="producto.html#para-quien">Para quién es</a>
+          <a href="producto.html#implementacion">Implementación</a>
+          <a href="preguntas.html">Preguntas frecuentes</a>
+        </div>
+        <div class="foot-col">
+          <b>Contacto</b>
+          <a href="https://wa.me/5493534276199?text=Hola!%20Quiero%20saber%20m%C3%A1s%20de%20WhAIgent" rel="noopener">WhatsApp: +54 9 353 427-6199</a>
+          <a href="mailto:whaigent@gmail.com">whaigent@gmail.com</a>
+          <a href="https://www.instagram.com/whaigent/" rel="noopener">Instagram: @whaigent</a>
+          <a href="https://admin.whaigent.com/" rel="noopener">Ingresar a la plataforma</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 WhAIgent · <a href="terminos.html">Términos y condiciones</a> · <a href="privacidad.html">Privacidad</a></span>
+      <span style="display:inline-flex;align-items:center;gap:12px">Proveedor de soluciones certificado por Meta <img src="brand-meta-partner-sm.webp" alt="Meta Business Partner" width="69" height="28" loading="lazy" style="height:28px;width:auto"></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav'),toggle=document.getElementById('navToggle');
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>10)}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  toggle.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open);
+    toggle.setAttribute('aria-label',open?'Cerrar menú':'Abrir menú');
+  });
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click',function(){nav.classList.remove('open');toggle.setAttribute('aria-expanded','false')})
+  });
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+    },{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+  }
+})();
+</script>
+</body>
+</html>

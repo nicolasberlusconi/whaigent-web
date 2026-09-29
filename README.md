@@ -57,3 +57,12 @@ Pendiente opcional: una captura de **Conversaciones** con datos demo (la actual 
 ## Editar
 
 Todo está en `index.html`, organizado por secciones comentadas (`<!-- ===== HERO ===== -->`, etc.). Los colores y tipografía salen de las variables CSS en `:root` al principio del `<style>`.
+
+## Integración con VentasxMayor (29-sep-2026)
+
+- Página dedicada: `integracion-ventasxmayor.html` (hero con los dos logos, beneficios, flujo de respuesta, alcance, pasos de conexión, seguridad, ficha de VentasxMayor y FAQ con JSON-LD).
+- Tarjeta destacada `.vx-feature` en `producto.html#integraciones`, en la home y en `mayoristas.html` e `indumentaria.html`. Link en el footer de todas las páginas.
+- Backlinks sin `nofollow` a `https://ventasxmayor.com.ar/integracion-whaigent`, `https://ventasxmayor.com.ar/` y `https://ventasxmayor.com.ar/integraciones`.
+- Logos de VentasxMayor en `logos/ventasxmayor-{white,dark}[-sm].webp`, generados desde el logo horizontal oficial.
+- Estilos: bloque "Integración VentasxMayor" al final de `styles.css` (clases `vx-*`).
+- El alcance publicado es el de la integración inicial, de solo lectura. Si VentasxMayor amplía el alcance (atribución, pedidos), actualizar las secciones Alcance y FAQ.

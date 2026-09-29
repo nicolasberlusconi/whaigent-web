@@ -25,6 +25,8 @@ Empresas y vendedores B2B con volumen de conversaciones, equipo comercial y vent
 
 Meta WhatsApp Business Platform (API oficial), modelos de IA de última generación, SMTP, Google Sheets, catálogos CSV, fuentes web autorizadas y webhooks.
 
+Integración con VentasxMayor (plataforma de tienda B2B para mayoristas, https://ventasxmayor.com.ar/): WhAIgent se conecta a la tienda con el token propio de cada negocio, sincroniza el catálogo e importa los clientes al CRM. Cuando el cliente envía el código o SKU exacto, consulta en vivo el precio de lista y el stock en la tienda y responde por WhatsApp. La integración es de solo lectura: no crea pedidos, no reserva ni modifica stock y no aplica precios especiales por cliente. Manual de conexión: https://ventasxmayor.com.ar/integracion-whaigent
+
 ## Precios
 
 30 días de prueba gratis, sin tarjeta. Después: $150.000 ARS por mes si se factura en Argentina, o USD 99 por mes en el resto de Latinoamérica. Las funciones son las mismas en ambos casos. Sin contrato de permanencia: la facturación es mensual y se puede cancelar cuando se quiera. Implementación acompañada sin costo. La mensajería de Meta (conversaciones de WhatsApp) se abona aparte, directamente a Meta y según sus tarifas.
@@ -45,6 +47,7 @@ Negocios que ya operan con WhAIgent: Alma Calma, Quo Productos, Insumos Bijou, M
 
 - [Inicio](https://whaigent.com/): el problema, la propuesta de valor y un vistazo a la plataforma
 - [Producto](https://whaigent.com/producto.html): cómo funciona, CRM y pipeline, seguimientos automáticos, campañas masivas, funciones, control humano, casos de uso, integraciones e implementación
+- [Integración con VentasxMayor](https://whaigent.com/integracion-ventasxmayor.html): qué lee de la tienda mayorista, cómo responde precio y stock, alcance, pasos de conexión y seguridad
 - [Precios](https://whaigent.com/precios.html): plan único de $150.000 ARS/mes y costos de mensajería de Meta
 - [Preguntas frecuentes](https://whaigent.com/preguntas.html): dudas habituales antes de contratar
 - [Industrias](https://whaigent.com/industrias.html): cómo se aplica por rubro — [mayoristas y distribuidoras](https://whaigent.com/mayoristas.html), [representaciones comerciales](https://whaigent.com/representaciones.html) (incluye el caso real de IZ REP), [inmobiliarias](https://whaigent.com/inmobiliarias.html), [concesionarias](https://whaigent.com/concesionarias.html), [agencias de viajes](https://whaigent.com/viajes.html), [indumentaria mayorista](https://whaigent.com/indumentaria.html), [salud y estética](https://whaigent.com/salud-estetica.html) y [educación](https://whaigent.com/educacion.html)
